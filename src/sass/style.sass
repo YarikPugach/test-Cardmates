@@ -1,0 +1,297 @@
+@import reset
+@import var
+@import fonts
+
+//simple gradient
+=g($color1, $color2)
+	background: linear-gradient($color1, $color2)
+
+// width for adaptive
+=r($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+
+body
+	background: $color-bg url(../img/bg.png) no-repeat
+	background-size: cover
+
+.container
+	max-width: 1366px
+	margin: 0 auto
+
+.header
+	text-align: center
+	color: $white
+	&__title
+		margin-top: 44px
+		margin-bottom: 10px
+	&__description
+		+panton-reg
+		font-size: 15px
+		width: 50%
+		margin: 0 auto
+		margin-bottom: 51px
+		position: relative
+		z-index: 2
+		+r(600)
+			width: 80%
+.h1
+	+movavi
+	font-size: 73px
+	text-transform: uppercase
+	letter-spacing: 1.5px
+	overflow: hidden
+	span
+		position: relative
+		z-index: 2
+	&__highlight
+		margin-bottom: 10px
+		text-shadow: inner 1px 2px 4px rgba(0, 0, 0, 0.75)
+		&:before,
+		&:after 
+			content: ''
+			display: inline-block
+			vertical-align: middle	
+			box-sizing: border-box
+			width: 100%
+			height: 2px
+			background: $color-line
+			margin: 0 50px 15px		
+		&:before 
+			margin-left: -100%
+		&:after
+			margin-right: -100%
+
+.highlight
+	+g($color-title-gr1, $color-title-gr2)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+
+.images
+	width: 1366px
+	margin: 0 auto
+	position: relative
+.image-left
+	position: absolute
+	left: 0
+	bottom: 50px
+	padding-left: 42px
+	+r(1240)
+		display: none
+.image-right
+	position: absolute
+	padding-right: 42px
+	right: 0
+	bottom: -24px
+	z-index: 1
+	+r(1240)
+		display: none
+
+.icon-star
+	fill: $white
+	width: 22px
+	height: 19px
+
+
+	/* стилизация топ 5 онлайн казино */
+.block
+	display: flex
+	align-items: top
+	position: relative
+	color: $white
+	margin: 0 40px 24px 40px
+	padding: 35px 30px 20px 30px
+	background-color: $color-bg-block
+	box-shadow: 1px 2px 33.82px 4.18px rgba(0, 0, 0, 0.75);
+	border-radius: 9px 
+	+r(1000)
+		flex-wrap: wrap
+		justify-content: center
+	+r(480)
+		padding-right: 15px
+		padding-left: 15px
+		margin-right: 15px
+		margin-left: 15px
+	&__number
+		border-radius: 9px 0 0 0 
+		position: absolute
+		width: 50px
+		height: 50px
+		left: 0
+		top: 0
+		+os-reg
+		font-weight: 700
+		font-size: 20px
+		line-height: 50px
+		text-align: center
+		background-color: $color-bg-numder
+	&__logo
+		padding-right: 35px
+		+r(1000)
+			padding-right: 0
+	&__btn
+		margin-top: 22px
+		+r(1000)
+			margin-bottom: 22px
+	&__text
+		color: $color-description
+		margin-bottom: 15px
+		
+
+.logo
+	padding-bottom: 18px
+	border-bottom: 1px solid $color-line
+	width: 215px	
+	img
+		display: block
+		width: 100%
+.logo-casino
+	padding-top: 18px
+	img
+		width: 80%
+		margin: 0 auto
+
+.btn
+	+panton-bold
+	font-size: 24px
+	+g($color-btn-gr1, $color-btn-gr2)
+	width: 100%
+	color: $white
+	text-transform: uppercase
+	padding-top: 7px
+	padding-bottom: 6px
+	border-radius: 3px
+	transition: .5s ease-in
+	&:hover
+		background: $color-title-gr2
+
+.title
+	display: flex
+	align-items: center
+	justify-content: space-between
+	flex-wrap: wrap
+	margin-bottom: 5px
+	+r(1280)
+			display: block
+			text-align: center
+	.h2
+		+r(1280)
+			display: block
+
+.rating
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	+r(1280)		
+		justify-content: center
+	&__bonus
+		+panton-reg
+		font-size: 19px
+		padding-left: 15px
+		border-left: 1px solid $color-line
+		+r(1280)
+			border-left: none
+			padding-left: 0
+	&__highlight
+		+panton-black
+		font-size: 26px
+		&:last-child
+			margin-right: 15px
+	&__number
+		display: flex
+		align-items: center
+		+panton-reg
+		font-size: 20px
+		color: $color-rating-txt
+		padding-left: 15px
+		border-left: 1px solid $color-line
+		+r(1280)
+			border-left: none
+	&__percent
+		+panton-bold
+		font-size: 23px
+		border-radius: 9px
+		background-color: $color-rating
+		padding-right: 13px
+		padding-left: 15px
+		margin-left: 21px
+		.icon-star
+			fill: $white
+			width: 24px
+			height: 23px	
+
+.h2
+	+movavi
+	font-size: 45px
+	letter-spacing: 1px
+	text-transform: uppercase
+
+
+.feature
+	display: flex
+	flex-wrap: wrap
+	+r(1280)
+		justify-content: space-around
+	+r(1000)
+		justify-content: space-between
+	&__block
+		+panton-reg
+		margin-right: 47px
+		margin-top: 10px
+		+r(1280)
+			margin-right: 0
+		&:last-child
+			margin-right: 0
+	&__title
+		+panton-bold
+		font-size: 18px
+
+.payment
+	&__title
+		margin-bottom: 13px
+	&__list
+		display: flex
+		margin-bottom: 3px
+		&:last-child
+			margin-bottom: 0
+	&__link
+		padding: 10px
+
+
+.footer
+	+os-reg
+	color: $white
+.footer__nav
+	background-color: $color-bg-footer
+
+.nav
+	padding: 30px 40px
+	&__list
+		display: flex
+		justify-content: center
+		font-weight: 700
+		+r(640)
+			display: block
+			text-align: center
+	&__item
+		margin-right: 35px
+		&:last-child
+			margin-right: 0
+		+r(640)
+			margin-right: 0
+			margin-bottom: 10px
+	&__link
+		text-decoration: none
+		color: $white
+		text-transform: uppercase
+		padding: 5px
+		transition: 0.3s
+		&:hover
+			color: $color-title-gr2
+
+.copy
+	+os-reg
+	font-size: 14px
+	text-align: center
+	background-color: $color-bg-copy
+	padding: 20px 40px

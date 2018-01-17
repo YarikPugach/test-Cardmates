@@ -1,0 +1,29 @@
+// font-family 
+=font($alias, $name)
+  @font-face
+    font-family: $alias
+    src: url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".woff") format("woff")
+    font-weight: normal
+    font-style: normal
+// to use:
+//+font(black, cytiapro-black-webfont)
+
+
++font('Panton-Black', 'Panton-Black')
++font('Panton-Bold', 'Panton-Bold')
++font('Panton-Regular', 'Panton-Regular')
++font('OpenSans-Regular', 'OpenSans-Regular')
++font('MovaviGrotesqueBlack', 'MovaviGrotesqueBlack')
+
+
+
+=panton-black
+	font-family: 'Panton-Black', sans-serif
+=panton-bold
+	font-family: 'Panton-Bold', sans-serif
+=panton-reg
+	font-family: 'Panton-Regular', sans-serif
+=os-reg
+	font-family: 'OpenSans-Regular', sans-serif
+=movavi
+	font-family: 'MovaviGrotesqueBlack', sans-serif
